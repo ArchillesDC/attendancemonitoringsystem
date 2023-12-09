@@ -1,0 +1,266 @@
+*,
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.body1{
+    background-color: rgb(43, 148, 154);
+}
+.background{
+    width: 430px;
+    height: 420px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+}
+.background .shape{
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    border-radius: 50%;
+}
+.shape:first-child{
+    background: linear-gradient(
+        #666769,
+        rgb(225, 230, 234)
+    );
+    left: -80px;
+    top: -80px;
+}
+
+header {
+    
+    background-color: #333;
+    padding: 15px; /* Reduced padding */
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  header a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px; /* Adjusted font size */
+    margin: 10px;
+  }
+  
+  .burger-icon {
+    display: none;
+    cursor: pointer;
+  }
+  
+  .burger-icon div {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  
+  @media (max-width: 600px) {
+    header a {
+      display: none;
+    }
+  
+    .burger-icon {
+      display: block;
+    }
+  
+    header.responsive a {
+      display: block;
+      margin: 10px 0; /* Adjusted margin for responsive mode */
+    }
+  
+    header.responsive .burger-icon div:nth-child(1) {
+      transform: rotate(-45deg) translate(-5px, 6px);
+    }
+  
+    header.responsive .burger-icon div:nth-child(2) {
+      opacity: 0;
+    }
+  
+    header.responsive .burger-icon div:nth-child(3) {
+      transform: rotate(45deg) translate(-5px, -6px);
+    }
+  }
+
+  header a:hover{
+    position: relative;
+   background-color: #f09819;
+    width: 200px;
+   border-radius: 10px;
+  }
+  
+
+.shape:last-child{
+    background: linear-gradient(
+        to right,
+        #ff512f,
+        #f09819
+    );
+    right: -30px;
+    bottom: -80px;
+}
+p{
+    font-size: 0.8rem;
+}
+
+form{
+    margin-left: 420px;
+    height: 550px;
+    margin-top: 4rem;
+    width: 450px;
+    background-color: rgba(255,255,255,0.13);
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 30px 20px;
+}
+form *{
+    font-family: 'Poppins',sans-serif;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+}
+form h3{
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 42px;
+    text-align: center;
+}
+
+label{
+    display: block;
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 500;
+}
+input{
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: rgba(255,255,255,0.07);
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 300;
+}
+::placeholder{
+    color: #e5e5e5;
+}
+ input:invalid {
+      border: 1px solid red;
+    }
+
+.btn button{
+    margin-top: 3rem;
+    width: 400px;
+    background-color: #ffffff;
+    color: #080710;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
+.btn button:hover{
+    background-color: rgb(16, 198, 16);
+}
+
+  .error-message {
+    background-color: #f09819;
+    color: #dc3545;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  table { 
+    width: 50rem;
+    margin-top: 10rem;
+    border-collapse: collapse; 
+    position: absolute;
+    margin-left: 2rem;
+  }
+ 
+tr:nth-child(odd) {
+  background: #eee;
+}
+
+
+tr:nth-child(even) {
+  background: #eee;
+}
+  th { 
+    background: #333; 
+    color: white; 
+    font-weight: bold; 
+    font-size: 1.7rem;
+  }
+  td, th { 
+    padding: 8px; 
+    border: 1px solid #ccc; 
+    font-size: 1.4rem;
+  }
+
+  @media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	tr { border: 1px solid #ccc; }
+	
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	}
+	
+	td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+	}
+	
+	/*
+	Label the data
+	*/
+	td:nth-of-type(1):before { content: "First Name"; }
+	td:nth-of-type(2):before { content: "phonenumber"; }
+	td:nth-of-type(3):before { content: "address"; }
+	td:nth-of-type(4):before { content: "actions"; }
+}
+  
